@@ -7,7 +7,7 @@ import "./App.css";
 function App(props) {
   return (
     <div className="video-chat-app">
-      <h1>Video Chat App</h1>
+      <h1 className="video-chat-app-title">Video Chat App</h1>
       <VideoPlayer />
       <Options>
         <Notifications />

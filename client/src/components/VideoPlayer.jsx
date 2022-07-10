@@ -8,17 +8,18 @@ function VideoPlayer(props) {
     useContext(SocketContext);
   return (
     <div className="video-player">
-      <h1>video player component</h1>
-      {console.log(stream)}
-
-      <div>{stream && <video playsInline muted ref={myVideo} autoPlay />}</div>
-
-      <h3>user</h3>
-      <div>
-        {callAccepted && !callEnded && (
-          <video playsInline muted ref={userVideo} autoPlay />
-        )}
-      </div>
+      {stream && (
+        <div className="video-container">
+          <h4 className="video-player-name">{name}</h4>
+          <video playsInline muted ref={myVideo} autoPlay />
+        </div>
+      )}
+      {callAccepted && !callEnded && (
+        <div className="video-container">
+          <h4 className="video-player-name">{call.name}</h4>
+          <video playsInline ref={userVideo} autoPlay />
+        </div>
+      )}
     </div>
   );
 }

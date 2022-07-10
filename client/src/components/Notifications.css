@@ -1,0 +1,10 @@
+.notification {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caller-name {
+  color: #ff5f6d;
+}

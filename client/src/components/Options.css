@@ -2,6 +2,8 @@
   border: 0.3rem solid black;
   border-radius: 1rem;
   padding: 2rem 0;
+  background-color: white;
+  box-shadow: 2px 4px 8px;
 }
 .options-form {
   display: flex;
@@ -10,7 +12,7 @@
 }
 
 .options-btn {
-  background-color: rgb(18, 97, 143);
+  background-color: rgb(13, 37, 173);
   padding: 1rem 1rem;
   font-size: 1.6rem;
   color: white;
@@ -33,17 +35,26 @@
 .info-container-group {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .info-container-input {
   border: none;
   border-bottom: 2px solid;
-  margin: 1rem 0;
   padding: 1rem 0;
+  margin-bottom: 2rem;
   font-size: 1.6rem;
 }
 
+.info-container-label {
+  display: block;
+  visibility: hidden;
+  margin-top: 1rem;
+}
+
+.visible-label {
+  visibility: visible;
+}
 .info-container-input::placeholder {
   color: rgb(177, 173, 173);
 }

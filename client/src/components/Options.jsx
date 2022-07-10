@@ -10,11 +10,22 @@ function Options({ children }) {
   const [idToCall, setIdToCall] = useState("");
   return (
     <div className="options">
-      <form className="options-form">
+      <form
+        className="options-form"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <div className="option-container-item">
           <h3 className="info-container-title">Account Info</h3>
           <div className="info-container-group">
-            <label>Name</label>
+            {
+              <label
+                className={`info-container-label ${
+                  name ? "visible-label" : ""
+                } `}
+              >
+                Name
+              </label>
+            }
             <input
               className="info-container-input"
               type="text"
@@ -29,15 +40,29 @@ function Options({ children }) {
         </div>
         <div className="option-container-item">
           <h3 className="info-container-title">Make a call</h3>
-          <label>ID to Call</label>
+          <label
+            className={`info-container-label ${
+              idToCall ? "visible-label" : ""
+            } `}
+          >
+            ID to Call
+          </label>
           <input
             className="info-container-input"
             type="text"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
+            onChange={(e) => setIdToCall(e.target.value)}
+            value={idToCall}
             placeholder="ID to Call"
           />
-          <button className="options-btn">📞 Call</button>
+          {callAccepted && !callEnded ? (
+            <button className="options-btn" onClick={leaveCall}>
+              ☎️ Hang up
+            </button>
+          ) : (
+            <button className="options-btn" onClick={() => callUser(idToCall)}>
+              📞 Call
+            </button>
+          )}
         </div>
       </form>
 

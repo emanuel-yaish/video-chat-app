@@ -1,6 +1,21 @@
+.video-player {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 video {
-  width: 500px;
-  height: 500px;
+  height: 40vh;
+}
+
+.video-container {
+  background-color: white;
+  padding: 1rem 0.8rem;
+  margin: 2rem;
   border: solid 3px black;
-  background-color: blue;
+  box-shadow: 2px 4px 8px black;
+}
+
+.video-player-name {
+  margin-bottom: 0.5rem;
 }
