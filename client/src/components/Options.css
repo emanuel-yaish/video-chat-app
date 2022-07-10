@@ -1,0 +1,53 @@
+.options {
+  border: 0.3rem solid black;
+  border-radius: 1rem;
+  padding: 2rem 0;
+}
+.options-form {
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
+}
+
+.options-btn {
+  background-color: rgb(18, 97, 143);
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 2px 4px 10px black;
+}
+
+.options-btn:active {
+  box-shadow: none;
+}
+
+.info-container-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.option-container-item,
+.info-container-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info-container-input {
+  border: none;
+  border-bottom: 2px solid;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.info-container-input::placeholder {
+  color: rgb(177, 173, 173);
+}
+
+.info-container-input:focus {
+  outline: none;
+}

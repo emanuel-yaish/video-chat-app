@@ -1,11 +1,17 @@
 import React from "react";
+import Notifications from "./components/Notifications";
+import Options from "./components/Options";
 import VideoPlayer from "./components/VideoPlayer";
+import "./App.css";
 
 function App(props) {
   return (
-    <div>
+    <div className="video-chat-app">
       <h1>Video Chat App</h1>
       <VideoPlayer />
+      <Options>
+        <Notifications />
+      </Options>
     </div>
   );
 }
