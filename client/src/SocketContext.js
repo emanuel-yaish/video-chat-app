@@ -19,19 +19,25 @@ const ContextProvider = ({ children }) => {
   const connectionRef = useRef();
 
   useEffect(() => {
-    navigator.mediaDevices
-      .getUserMedia({ video: true, audio: true })
-      .then((currentStream) => {
+    const getUserMedia = async () => {
+      try {
+        const currentStream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+          audio: true,
+        });
         setStrem(currentStream);
-        if (myVideo.current) {
-          myVideo.current.srcObject = currentStream;
-        }
-      });
+        myVideo.current.srcObject = currentStream;
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
     socket.on("me", (socketId) => setMe(socketId));
     socket.on("callUser", ({ from, name: callerName, signal }) => {
       setCall({ isReceivingCall: true, from, name: callerName, signal });
     });
+
+    getUserMedia();
   }, []);
 
   const answerCall = () => {
