@@ -13,7 +13,7 @@ function VideoPlayer(props) {
         <video playsInline muted ref={myVideo} autoPlay />
       </div>
 
-      {!callAccepted && !callEnded && (
+      {callAccepted && !callEnded && (
         <div className="video-container">
           <h4 className="video-player-name">{call.name}</h4>
           <video playsInline ref={userVideo} autoPlay />
