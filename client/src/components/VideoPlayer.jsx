@@ -4,7 +4,7 @@ import { SocketContext } from "../SocketContext";
 import "./VideoPlayer.css";
 
 function VideoPlayer(props) {
-  const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } =
+  const { name, callAccepted, myVideo, userVideo, callEnded, call } =
     useContext(SocketContext);
   return (
     <div className="video-player">
