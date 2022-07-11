@@ -8,3 +8,16 @@
 .caller-name {
   color: #ff5f6d;
 }
+
+@media screen and (max-width: 1200px) {
+  .notification {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 11vh;
+  }
+
+  .notification h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+}

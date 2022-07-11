@@ -25,3 +25,15 @@
   transform: skew(-10deg);
   box-shadow: 2px 4px 8px black;
 }
+
+/* If screen size is 600px wide, or less */
+@media screen and (max-width: 1200px) {
+  .video-chat-app {
+    padding-bottom: 2rem;
+  }
+
+  .video-chat-app-title {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}

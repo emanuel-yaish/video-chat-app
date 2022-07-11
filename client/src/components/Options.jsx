@@ -23,7 +23,7 @@ function Options({ children }) {
                   name ? "visible-label" : ""
                 } `}
               >
-                Name
+                Name:
               </label>
             }
             <input
@@ -38,6 +38,7 @@ function Options({ children }) {
             <button className="options-btn">📋 Copy your Id</button>
           </CopyToClipboard>
         </div>
+        <hr className="option-separator" />
         <div className="option-container-item">
           <h3 className="info-container-title">Make a call</h3>
           <label
@@ -45,7 +46,7 @@ function Options({ children }) {
               idToCall ? "visible-label" : ""
             } `}
           >
-            ID to Call
+            ID to Call:
           </label>
           <input
             className="info-container-input"

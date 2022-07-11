@@ -50,6 +50,7 @@
   display: block;
   visibility: hidden;
   margin-top: 1rem;
+  color: #ff5f6d;
 }
 
 .visible-label {
@@ -61,4 +62,51 @@
 
 .info-container-input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .options {
+    width: 90%;
+  }
+  .options-form {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .option-container-item {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25vh;
+  }
+  .info-container-title {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  .info-container-input {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .info-container-title {
+    padding: 0;
+  }
+
+  .options-btn {
+    font-size: 1rem;
+    padding: 1rem 1rem;
+  }
+  .option-separator {
+    width: 70%;
+    margin: 1rem 0;
+    border-top: 0.1rem solid #ff5f6d;
+  }
+
+  .info-container-label {
+    text-align: left;
+    color: #ff5f6d;
+    margin: 0;
+  }
 }

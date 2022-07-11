@@ -19,3 +19,24 @@ video {
 .video-player-name {
   margin-bottom: 0.5rem;
 }
+
+/* If screen size is 600px wide, or less */
+@media screen and (max-width: 1200px) {
+  .video-player {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .video-container {
+    background-color: white;
+    padding: 1rem;
+    margin: 0;
+    width: 90%;
+    margin: 1rem 0;
+  }
+
+  video {
+    height: 40vh;
+    width: 100%;
+  }
+}
